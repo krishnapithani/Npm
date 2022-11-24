@@ -1,6 +1,7 @@
 FROM node:16
-LABEL author:'vamsi krishna'
+LABEL author="vamsi krishna"
 COPY package*.json ./
-CMD [ "node", "server.js" ]
+COPY server.js ./
+CMD [ "npm install", "npm start" ]
 EXPOSE 8080
 
